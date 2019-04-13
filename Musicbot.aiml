@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    "Te indico los comandos con los que puedo ofrecer mi ayuda: 
+   Yo soy (tu nombre)= Empieza por presentarte, de esta manera sabre como te llamas!. 
+    !musica (grupo)  = Te buscare las mejores playlist de youtube para que te acompañen en el dia a dia.
+    !concierto (grupo) = Quieres saber cuando es el proximo concierto de tu grupo favorito? este es tu comando.
+    !información (grupo)= Toda la información sobre los grupos que mas te apasionan.
+    !comprar (grupo)= Comprasen amazon
+    !curiosidades= curiosidades sobre la musica al azar"
+     <category>
+    <pattern>*</pattern>
+    <that>*</that>
+    <template>No tengo respuestas para eso.
+    </template>
+  </category>
+ 
+
+  <category>
+	<pattern>Yo soy  * </pattern>
+	<template><think><set name="nombre"><star/></set></think> Encantando de conocerte <star/>.</template>
+</category>
+--------------------------------------------------------------------------------
+  <category>
+    <pattern>!musica * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Aqui tienes varias playlists de <star/>, espero que te guste <get name="nombre"/>
+        <image>https://images6.alphacoders.com/417/417448.jpg</image>
+    <button>
+        <text>Click Aqui</text>
+        <url>https://www.youtube.com/results?search_query=<star/></url>
+    </button>
+     
+    </template>
+  </category>
+  
+   <category>
+       <pattern>!musica</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!musica <get name="eso"/></srai></li>
+        <li>Que musica quieres escuchar</li>
+     </condition>
+ </template>
+  </category>
+  
+     <category>
+<pattern>*</pattern>
+<that>QUE MUSICA QUIERES ESCUCHAR</that>
+<template>
+<srai>!musica <star/></srai>
+</template>
+</category>
+  
+  
+  
+  ------------------------------------------------------------------------------
+  
+  
+  
+   <category>
+    <pattern>!concierto * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Aqui tienes los proximos conciertos de  <star/>, espero que te guste <get name="nombre"/>
+        <image>http://ganemospalencia.com/wp-content/uploads/2016/03/qq.jpg</image>
+    <button>
+        <text>Click Aqui</text>
+        <url>https://www.ticketea.com/conciertos-de/<star/></url>
+    </button>
+    </template>
+    
+  </category>
+  
+   <category>
+       <pattern>!concierto</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!concierto <get name="eso"/></srai></li>
+        <li>A que grupo quieres ir a ver</li>
+     </condition>
+ </template>
+  </category>
+  
+     <category>
+<pattern>*</pattern>
+<that>A QUE GRUPO QUIERES IR A VER</that>
+<template>
+<srai>!concierto <star/></srai>
+</template>
+</category>
+
+--------------------------------------------------------------------------------  
+    
+   <category>
+    <pattern>!información * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Toda la información sobre el grupo <star/> la podras encontrar aquí , espero que te guste <get name="nombre"/>
+    <button>
+        <text>Click Aqui</text>
+        <url>https://es.wikipedia.org/wiki/<star/></url>
+    </button>
+    </template>
+    
+  </category>
+  
+   <category>
+       <pattern>!información</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!información <get name="eso"/></srai></li>
+        <li>De que grupo te muestro la información</li>
+     </condition>
+     
+ </template>
+  </category>
+  
+     <category>
+<pattern>*</pattern>
+<that>De que grupo te muestro la información</that>
+<template>
+<srai>!información <star/></srai>
+</template>
+</category>
+
+--------------------------------------------------------------------------------
+  <category>
+    <pattern>!comprar * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Toda  sobre el grupo <star/> lo podras encontrar aquí , espero haberte servido de ayuda <get name="nombre"/>
+        <carousel>
+            <card>
+                <image>http://culturamir.com/wp-content/uploads/2017/06/Cano-1-Aud%C3%ADfonos-en-un-libro.jpg</image>
+                  <title>Libros</title>
+                       <subtitle>Todo los libres de/sobre tus grupos favoritos</subtitle>
+    <button>
+        <text>Visitar</text>
+        <url>https://www.amazon.es/s?k=<star/>+books</url>
+    </button>
+    </card>
+    <card>
+        <image>http://img.chilango.com/2017/07/Discos-de-vinilos.jpg</image>
+        <title>Discos</title>
+        <subtitle>Todo los discos de tus grupos favoritos</subtitle>
+     <button>
+         
+        <text>Visitar</text>
+        <url>https://www.amazon.es/s?k=<star/>+discos</url>
+    </button>
+    </card>
+    <card>
+          <title>Ropa</title>
+               <subtitle>Todo la de/sobre tus grupos favoritos</subtitle>
+          <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwACD-o47p3IHLHW5S19FfgSdGHHFd8m8mITDe3EVF-z8kUAQH</image>
+    <button>
+        <text>Visitar</text>
+        <url>https://www.amazon.es/s?k=<star/>+ropa</url>
+    </button>
+    </card>
+   
+ </carousel>
+    </template>
+  </category>
+   <category>
+       <pattern>!comprar</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!comprar <get name="eso"/></srai></li>
+        <li>De que grupo quieres comprar</li>
+     </condition>
+ </template>
+  </category>
+  
+     <category>
+<pattern>*</pattern>
+<that>De que grupo quieres comprar</that>
+<template>
+<srai>!comprar <star/></srai>
+</template>
+</category>
+--------------------------------------------------------------------------------
+ <category>
+    <pattern>!curiosidades</pattern>
+    <template>
+    <random>
+        <li>Escuchar música es una de las pocas actividades que implican el uso de todas las partes de nuestro cerebro.</li>
+        <li>Al escuchar música, tu corazón modifica sus latidos para intentar imitar el ritmo de la música que escuchas.</li>
+        <li>Sabéis eso de tener todo el día una canción sonando en nuestra cabeza y no poder pararla? Este fenómeno se conoce como “gusano musical”.</li>
+        <li>Al escuchar rock o pop nuestra resistencia física puede aumentar un 15%.</li>
+        <li>Cuando escuchamos música se libera dopamina en nuestro cerebro, como cuando tomas drogas, practicas sexo o comes.</li>
+        <li>La música puede ayudarnos en los procesos de razonamiento y mejora notablemente las áreas motoras de nuestro cerebro. Por eso se cree que la música surgió para “ayudarnos a todos a movernos juntos”.</li>
+        <li>Hay investigaciones que han demostrado que lo que sentimos cuando escuchamos una canción es muy similar a lo que el resto de la gente en el mismo lugar está experimentando. (¡De ahí viene que hagamos tantos amigos en los conciertos!).</li>
+        <li>La música escuchada se guarda en áreas del cerebro diferentes a las de los recuerdos, por eso las personas con Alzheimer son capaces de recordar melodías de su pasado.</li>
+        <li>Escuchar música alta puede provocar que bebamos bebidas más rápidamente en menos tiempo. Ahora entendemos por qué la música está tan alta en las discotecas.</li>
+        <li>Tocar algún instrumento musical puede mejorar la comunicación verbal.</li>
+        <li>Las flores pueden crecer más rápido si hay música a su alrededor.</li>
+        <li>El tipo de música que nos gusta a la edad de 20 años suele ser el tipo de música que nos gustará el resto de nuestra vida.</li>
+        <li>Los bebés aprenden antes el significado de las emociones de la música antes que el significado de las palabras.</li>
+        <li>La forma en la que concebimos el mundo se ve condicionada por el tipo de música que escuchamos.</li>
+        <li>Y para terminar…. ¿sabéis que al descargar la cisterna del wc, en la mayoría de los inodoros, da un Mi bemol?</li>
+    </random>
+    </template>
+</category>
+</aiml>
