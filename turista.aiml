@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>!ciudad * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Aqui hay imformación sobre <star/>
+    <button>
+        <text>Click Aqui</text>
+        <url>https://es.wikipedia.org/wiki/<star/></url>
+    </button>
+    </template>
+  </category>
+  <category>
+    <pattern>!Tiempo * </pattern>
+    <template>
+       <think><set name="eso"><star/></set></think>
+        Este es el tiempo que tendras en <star/>
+    <button>
+        <text>Click Aqui </text>
+        <url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+    </button></template>
+  </category>
+    <category>
+    <pattern>!mapa  * </pattern>
+    <template>
+         <think><set name="eso"><star/></set></think>
+        Aqui tienes el mapa de <star/>
+    <button>
+        <text>Click Aqui </text>
+        <url>https://www.google.com/maps/place/<star/></url>
+    </button></template>
+  </category>
+  <category><pattern>!ciudad</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!ciudad <get name="eso"/></srai></li>
+         <li>De que ciudad quieres que te hable</li>
+     </condition>
+ </template>
+  </category>
+   <category><pattern>!tiempo</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!tiempo <get name="eso"/></srai></li>
+         <li>donde</li>
+          </condition>
+ </template>
+  </category>
+   <category><pattern>!mapa</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!mapa <get name="eso"/></srai></li>
+         <li>De donde quieres el mapa</li>
+     </condition>
+ </template>
+  </category>
+    <category><pattern>!hotel</pattern>
+ <template>
+     <condition name="eso">
+         <li value="*"><srai>!hotel <get name="eso"/></srai></li>
+         <li>En que ciudad quieres el hotel</li>
+     </condition>
+ </template>
+  </category>
+ <category>
+    <pattern>!hotel  * </pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Los mejores hoteles en <star/>
+    <button>
+        <text>Click Aqui</text>
+        <url>https://www.momondo.es/hoteles/<star/></url>
+    </button>
+    </template>
+  </category>
+  <category>
+  <pattern>*</pattern>
+<that>DE DONDE QUIERES EL MAPA</that>
+<template>
+<srai>!mapa <star/></srai>
+</template>
+</category>
+  <category>
+  <pattern>*</pattern>
+<that>EN QUE CIUDAD QUIERES EL HOTEL</that>
+<template>
+<srai>!hotel <star/></srai>
+</template>
+</category>
+   <category>
+<pattern>*</pattern>
+<that>DE QUE CIUDAD QUIERES QUE TE HABLE</that>
+<template>
+<srai>!ciudad <star/></srai>
+</template>
+</category>
+<category>
+    <pattern>*</pattern>
+<that>DONDE</that>
+<template>
+<srai>!tiempo <star/></srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>*</that>
+<template>
+No entiendo que quieres preguntarme.
+Te explico un poco como funciono:
+bla
+bla
+bla
+</template>
+</category>
+</aiml>
