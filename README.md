@@ -15,10 +15,10 @@ Inctruciones
 
 Uso de 13 categorias
 Uso de contexto
-!ciudad
-!mapa
-!tiempo
-!hotel//
+- !ciudad
+- !mapa
+- !Tiempo
+- !hotel
 
                                           EJERCICIO 2
 
