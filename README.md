@@ -12,9 +12,10 @@ Inctruciones
 - !mapa   "Lugar"    Nos muestra el mapa del lugar indicado
 - !hotel  "Ciudad"   Nos muestra los mejores hoteles de la ciudad
 --------------------------------------------------------------------------
-
+~~
 Uso de 13 categorias
 Uso de contexto
+~~
 - !ciudad
 - !mapa
 - !Tiempo
