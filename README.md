@@ -7,7 +7,7 @@ traduït a una altra llengua (en principi català o espanyol; si ho voleu fer en
 Te explico un poco como funciono:
 Inctruciones
 
-!ciudad "ciudad"   Nos muestra información sobre la ciudad indicada.
+// !ciudad "ciudad"   Nos muestra información sobre la ciudad indicada.
 !tiempo "Lugar"    Nos muestra el tiempo que hace en la ubicacion indicada.
 !mapa   "Lugar"    Nos muestra el mapa del lugar indicado
 !hotel  "Ciudad"   Nos muestra los mejores hoteles de la ciudad
@@ -18,7 +18,7 @@ Uso de contexto
 !ciudad
 !mapa
 !tiempo
-!hotel
+!hotel//
 
                                           EJERCICIO 2
 
