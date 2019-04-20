@@ -38,10 +38,10 @@ https://github.com/pandorabots/Free-AIML.
 
 15 categorias
 Uso de contexto
-!musica
-!concierto
-!información
-!comprar
+- !musica
+- !concierto 
+- !información
+- !comprar
 
 Uso de :
 <carousel>
