@@ -33,7 +33,7 @@ Te indico los comandos con los que puedo ofrecer mi ayuda:
    -  !concierto (grupo) = Quieres saber cuando es el proximo concierto de tu grupo favorito? este es tu comando.
    -  !información (grupo)= Toda la información sobre los grupos que mas te apasionan.
    -  !comprar (grupo)= Comprasen amazon
-   -  !curiosidades= curiosidades sobre la musica al azar"
+   -  !curiosidades= curiosidades sobre la musica al azar
 ----------------------------------------------------------------------------
 
 15 categorias
