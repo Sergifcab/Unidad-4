@@ -54,7 +54,7 @@ Uso de :
   
 y las etiquetas basicas de aiml.
 
-<srai>
+>><srai>
 <template>
 <pattern>
 <that>
