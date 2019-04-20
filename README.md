@@ -47,15 +47,15 @@ Uso de contexto
 - !comprar
 
 Uso de :
-<carousel>
-<card>
-<image>
-<random>
+- carousel
+- card
+- image
+- random
   
 y las etiquetas basicas de aiml.
 
--srai
--template
--pattern
--that
--etc....
+- srai
+- template
+- pattern
+- that
+- etc....
