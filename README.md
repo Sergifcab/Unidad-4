@@ -5,6 +5,7 @@ disponible al tutorial de Steve Worswick. Implementau-lo a la plataforma pandora
 traduït a una altra llengua (en principi català o espanyol; si ho voleu fer en alguna altra, parlem-ne).
 
 Te explico un poco como funciono:
+
 Inctruciones
  
 - !ciudad "ciudad"   Nos muestra información sobre la ciudad indicada.
@@ -12,10 +13,11 @@ Inctruciones
 - !mapa   "Lugar"    Nos muestra el mapa del lugar indicado
 - !hotel  "Ciudad"   Nos muestra los mejores hoteles de la ciudad
 --------------------------------------------------------------------------
-~~
+
 Uso de 13 categorias
+
 Uso de contexto
-~~
+
 - !ciudad
 - !mapa
 - !Tiempo
@@ -49,7 +51,9 @@ Uso de :
 <card>
 <image>
 <random>
+  
 y las etiquetas basicas de aiml.
+
 <srai>
 <template>
 <pattern>
