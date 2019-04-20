@@ -27,13 +27,13 @@ Si voleu, poden ser modificacions substancials o ampliacions d'algun dels exempl
 https://github.com/pandorabots/Free-AIML.
 
 
-"Te indico los comandos con los que puedo ofrecer mi ayuda: 
+Te indico los comandos con los que puedo ofrecer mi ayuda: 
    Yo soy (tu nombre)= Empieza por presentarte, de esta manera sabre como te llamas!. 
-    !musica (grupo)  = Te buscare las mejores playlist de youtube para que te acompañen en el dia a dia.
-    !concierto (grupo) = Quieres saber cuando es el proximo concierto de tu grupo favorito? este es tu comando.
-    !información (grupo)= Toda la información sobre los grupos que mas te apasionan.
-    !comprar (grupo)= Comprasen amazon
-    !curiosidades= curiosidades sobre la musica al azar"
+   -  !musica (grupo)  = Te buscare las mejores playlist de youtube para que te acompañen en el dia a dia.
+   -  !concierto (grupo) = Quieres saber cuando es el proximo concierto de tu grupo favorito? este es tu comando.
+   -  !información (grupo)= Toda la información sobre los grupos que mas te apasionan.
+   -  !comprar (grupo)= Comprasen amazon
+   -  !curiosidades= curiosidades sobre la musica al azar"
 ----------------------------------------------------------------------------
 
 15 categorias
