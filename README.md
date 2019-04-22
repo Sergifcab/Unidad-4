@@ -40,6 +40,7 @@ Te indico los comandos con los que puedo ofrecer mi ayuda:
 ----------------------------------------------------------------------------
 
 15 categorias
+
 Uso de contexto
 - !musica
 - !concierto 
